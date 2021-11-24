@@ -14,9 +14,10 @@
 
     const rater = this.createRater()
     this.stars = this.createStars()
-
+    
     //rater.appendChild(stars)
     this.stars.forEach(star => rater.appendChild(star))
+    this.resetRating()
     shadow.appendChild(rater)
 
  }
@@ -24,7 +25,7 @@
  createRater() {
      const rater = document.createElement('div')
      rater.classList.add(`star-rater`)
-     //rater.addEventListener('')
+     rater.addEventListener('mouseout', this.resetRating.bind(this))
 
      return rater
  }
@@ -42,6 +43,11 @@
      }
      return Array.from({ length:5}, createStar)
  } 
+
+resetRating() {
+    this.currentRatingValue = this.getAttribute('data-rating') || 0
+    this.hightlightRating()
+}
 
 setRating(event) {
     this.setAttribute('data-rating', event.target.getAttribute('data-value'))
@@ -62,13 +68,13 @@ hightlightRating() {
     })
 }
 
+
+
 styles() {
      const style = document.createElement('style')
      style.textContent = `
-     .star-rater {
-         
-         .star{
-            font-size: 10rem;
+     .star-rater{
+            font-size: 5rem;
             color: gray;
             cursor: pointer;
 
