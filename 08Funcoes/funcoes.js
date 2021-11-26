@@ -5,13 +5,19 @@ function somar(x1,x2){
     return somar
 }
 
+function multiplicar(x3,x4){
+    const mult = x3 * x4
+    console.log('Multiplicar 5 * 5 =',mult)
+    return mult
+}
+multiplicar(5,5)
 
 somar(5,5)
 somar(1,4)
 
 //Função boas vindas
 function boasVindas(nome) {
-    const mensagem = 'Olá ${nome} !';
+    const mensagem = ('Olá ${nome} !');
     console.log(mensagem)
     return mensagem;
 }
@@ -20,7 +26,7 @@ boasVindas("Jean");
 
 //função Par ou Impar
 function parimp(n) {
-    if(n%2==0){
+    if(n % 2==0){
         return console.log('par')
     }
         else {
@@ -71,6 +77,19 @@ function Fatorial(n){
     return fat
 }
 console.log(Fatorial(5))
+
+
+
+//Fatorial recursivo !5 = 5 x 4 x 3 x 2 x1 = 120
+function FatorialRec(nu) {
+    if (nu == 1){
+        return 1
+    }
+    else{
+        return nu * FatorialRec(nu-1)
+    }
+}
+console.log(FatorialRec(5))
 
 
 
