@@ -1,0 +1,76 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #c1c1c1;
+    padding: 5px 10px 5px 10px;
+}
+ 
+#title, .subtitle, .post_title {
+color: #505050;
+}
+
+#title{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: line-through;
+    color: #505050;
+}
+
+.photo{
+    padding-bottom: 10px;
+    border-radius: 50px;
+    border: 1px solid #c1c1c1;
+    
+}
+
+.post_images{
+    margin-bottom: 15px;
+
+}
+
+
+.post_title {
+    font-size: 16px;
+    font-style: italic;
+    color: tomato;
+    cursor: wait;
+    margin: 10px;
+}
+
+.post  {
+     background: #c1c1c1;
+     padding: 10px;
+     border: 3px solid black;
+     margin: 10px;
+     border-radius: 15px;
+}
+
+.post_content {
+    margin: 0;
+    margin-bottom: 15x;
+    text-transform: capitalize;
+}
+
+
+.contacts_list_linkdin {
+    list-style-type: none;
+    padding: 10px 65px;
+    list-style-image: url("/imagens/linkdin.png");
+    cursor: wait;  
+}
+
+.contacts_list_mail {
+    list-style-type: none;
+    padding: 1px 15px;
+    list-style-image: url("/imagens/email.png");
+    cursor: wait;  
+}
+
+.contacts_list_git {
+    list-style-type: none;
+    padding: 1px 35px;
+    list-style-image: url("/imagens/github.png");
+    cursor: wait;  
+}
